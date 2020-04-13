@@ -399,6 +399,61 @@ metro52840.menu.debug.l3.build.sysview_flags=-DCFG_SYSVIEW=1
 # -------------------------------------------------------
 
 
+# ---------------------------------------------
+# AramCon Badge 2020
+# ---------------------------------------------
+aramcon_badge_2020.name=AramCon Badge 2020
+
+# VID/PID for bootloader with/without UF2, Arduino + Circuitpython App
+aramcon_badge_2020.vid.0=0x239A
+aramcon_badge_2020.pid.0=0x807B
+aramcon_badge_2020.vid.1=0x239A
+aramcon_badge_2020.pid.1=0x007B
+aramcon_badge_2020.vid.2=0x239A
+aramcon_badge_2020.pid.2=0x807C 
+aramcon_badge_2020.vid.3=0x239A
+aramcon_badge_2020.pid.3=0x007C 
+
+# Upload
+aramcon_badge_2020.bootloader.tool=bootburn
+aramcon_badge_2020.upload.tool=nrfutil
+aramcon_badge_2020.upload.protocol=nrfutil
+aramcon_badge_2020.upload.use_1200bps_touch=true
+aramcon_badge_2020.upload.wait_for_upload_port=true
+aramcon_badge_2020.upload.maximum_size=815104
+aramcon_badge_2020.upload.maximum_data_size=237568
+
+# Build
+aramcon_badge_2020.build.mcu=cortex-m4
+aramcon_badge_2020.build.f_cpu=64000000
+aramcon_badge_2020.build.board=ARAMCON_BADGE_2020
+aramcon_badge_2020.build.core=nRF5
+aramcon_badge_2020.build.variant=aramcon_badge_2020
+aramcon_badge_2020.build.usb_manufacturer="CodeMagic"
+aramcon_badge_2020.build.usb_product="AramCon Badge 2020"
+aramcon_badge_2020.build.extra_flags=-DNRF52840_XXAA {build.flags.usb}
+aramcon_badge_2020.build.ldscript=nrf52840_s140_v6.ld
+aramcon_badge_2020.build.vid=0x239A
+aramcon_badge_2020.build.pid=0x807B
+
+# SofDevice Menu
+aramcon_badge_2020.menu.softdevice.s140v6=0.3.2 SoftDevice s140 6.1.1
+aramcon_badge_2020.menu.softdevice.s140v6.build.sd_name=s140
+aramcon_badge_2020.menu.softdevice.s140v6.build.sd_version=6.1.1
+aramcon_badge_2020.menu.softdevice.s140v6.build.sd_fwid=0x00B6
+
+# Debug Menu
+aramcon_badge_2020.menu.debug.l0=Level 0 (Release)
+aramcon_badge_2020.menu.debug.l0.build.debug_flags=-DCFG_DEBUG=0
+aramcon_badge_2020.menu.debug.l1=Level 1 (Error Message)
+aramcon_badge_2020.menu.debug.l1.build.debug_flags=-DCFG_DEBUG=1
+aramcon_badge_2020.menu.debug.l2=Level 2 (Full Debug)
+aramcon_badge_2020.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2
+aramcon_badge_2020.menu.debug.l3=Level 3 (Segger SystemView)
+aramcon_badge_2020.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3
+aramcon_badge_2020.menu.debug.l3.build.sysview_flags=-DCFG_SYSVIEW=1
+
+
 # ----------------------------------
 # Nordic nRF52840DK (PCA10056)
 # ----------------------------------
